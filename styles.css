@@ -1,0 +1,252 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navegación */
+nav {
+    background-color: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #34495e;
+}
+
+/* Secciones principales */
+main {
+    padding: 40px 0;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e74c3c;
+    color: #2c3e50;
+}
+
+/* Grid de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.producto h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.precio {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.producto h4 {
+    margin: 20px 0 10px;
+    color: #34495e;
+    font-size: 1.1rem;
+}
+
+.ingredientes {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+.ingredientes li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.ingredientes li:last-child {
+    border-bottom: none;
+}
+
+.valor-total {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-weight: bold;
+    border-left: 4px solid #3498db;
+}
+
+/* Inventario total */
+.inventario-total {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.inventario-total p {
+    font-size: 1.3rem;
+}
+
+.inventario-total strong {
+    color: #e74c3c;
+    font-size: 1.5rem;
+}
+
+/* Redes sociales */
+.redes-sociales {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.red-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.red-social:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.red-social i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.red-social span {
+    font-weight: 500;
+}
+
+/* Colores específicos para cada red social */
+.red-social:nth-child(1) i { color: #1DA1F2; } /* Twitter */
+.red-social:nth-child(2) i { color: #3b5998; } /* Facebook */
+.red-social:nth-child(3) i { color: #E1306C; } /* Instagram */
+.red-social:nth-child(4) i { color: #25D366; } /* WhatsApp */
+.red-social:nth-child(5) i { color: #0088cc; } /* Telegram */
+.red-social:nth-child(6) i { color: #FF0000; } /* YouTube */
+.red-social:nth-child(7) i { color: #D14836; } /* Gmail */
+.red-social.rappi i { color: #00B900; } /* Rappi */
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 5px 0;
+    }
+    
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .redes-sociales {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
